@@ -69,10 +69,10 @@ start();
 async function swapBars(barsDivs, i, j) {
     barsDivs[i].style.left = `${5 + j * 30}px`;
     barsDivs[i].classList.add("activate");
-    playNote(250 + parseFloat(barsDivs[i].style.height) * 4);
+    playNote(350 + parseFloat(barsDivs[i].style.height) * 6);
     barsDivs[j].style.left = `${5 + i * 30}px`;
     barsDivs[j].classList.add("activate");
-    playNote(250 + parseFloat(barsDivs[j].style.height) * 4);
+    playNote(350 + parseFloat(barsDivs[j].style.height) * 6);
     await sleep(300);
     barsDivs[i].classList.remove("activate");
     barsDivs[j].classList.remove("activate");
@@ -87,7 +87,7 @@ const algorithms = [
     sortingAlgorithms.insertionSort,
     sortingAlgorithms.mergeSort,
     sortingAlgorithms.quickSort,
-    sortingAlgorithms.bucketSort
+    sortingAlgorithms.heapSort
 ];
 
 const sort = async () => {
