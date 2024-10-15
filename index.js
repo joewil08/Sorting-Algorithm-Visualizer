@@ -1,7 +1,10 @@
 import { sleep } from "./helpers/util.js";
 import { SortingAlgorithms } from "./helpers/sorting-algorithms.js";
 
-function playNote(freq) {
+function playNote(freq, isMuted) {
+    if (isMuted) {
+        return;
+    }
     if (audioCtx == null) {
         audioCtx = new(
             AudioContext ||
@@ -22,6 +25,11 @@ function playNote(freq) {
 }
 
 let audioCtx = null;
+let isMuted = false;
+document.getElementById('sound-checkbox').addEventListener('change', function() {
+    isMuted = !this.checked;  // If checkbox is unchecked, isMuted becomes true
+    console.log("isMuted:", isMuted);  // For debugging purposes
+});
 
 let nBars = 10;
 
@@ -70,10 +78,10 @@ start();
 async function swapBars(barsDivs, i, j) {
     barsDivs[i].style.left = `${5 + j * (bars[i].width + gap)}px`;
     barsDivs[i].classList.add("activate");
-    playNote(350 + parseFloat(barsDivs[i].style.height) * 6);
+    playNote(350 + parseFloat(barsDivs[i].style.height) * 6, isMuted);
     barsDivs[j].style.left = `${5 + i * (bars[i].width + gap)}px`;
     barsDivs[j].classList.add("activate");
-    playNote(350 + parseFloat(barsDivs[j].style.height) * 6);
+    playNote(350 + parseFloat(barsDivs[j].style.height) * 6, isMuted);
     await sleep(300);
     barsDivs[i].classList.remove("activate");
     barsDivs[j].classList.remove("activate");
