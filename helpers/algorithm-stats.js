@@ -6,7 +6,7 @@ export const complexities = {
         bestSpace: "O(1)",
         averageSpace: "O(1)",
         worstSpace: "O(1)",
-        stability: "Stable",
+        stable: "Yes",
         inPlace: "Yes",
         parallelizable: "No"
     },
@@ -17,7 +17,7 @@ export const complexities = {
         bestSpace: "O(1)",
         averageSpace: "O(1)",
         worstSpace: "O(1)",
-        stability: "Unstable",
+        stable: "No",
         inPlace: "Yes",
         parallelizable: "No"
     },
@@ -28,7 +28,7 @@ export const complexities = {
         bestSpace: "O(1)",
         averageSpace: "O(1)",
         worstSpace: "O(1)",
-        stability: "Stable",
+        stable: "Yes",
         inPlace: "Yes",
         parallelizable: "No"
     },
@@ -39,7 +39,7 @@ export const complexities = {
         bestSpace: "O(n)",
         averageSpace: "O(n)",
         worstSpace: "O(n)",
-        stability: "Stable",
+        stable: "Yes",
         inPlace: "No",
         parallelizable: "Yes"
     },
@@ -50,7 +50,7 @@ export const complexities = {
         bestSpace: "O(log n)",
         averageSpace: "O(log n)",
         worstSpace: "O(n)",
-        stability: "Unstable",
+        stable: "No",
         inPlace: "Yes",
         parallelizable: "Yes"
     },
@@ -61,7 +61,7 @@ export const complexities = {
         bestSpace: "O(1)",
         averageSpace: "O(1)",
         worstSpace: "O(1)",
-        stability: "Unstable",
+        stable: "No",
         inPlace: "Yes",
         parallelizable: "No"
     }

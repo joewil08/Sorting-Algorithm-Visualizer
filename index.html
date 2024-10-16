@@ -17,6 +17,12 @@
             <div class="generate-new">
                 <p>Generate New Array</p>
                 <input type="number" name="sizeArray" id="numbersBars" min="1" max="250" value="10">
+                <select name="" class="select-array-type" id="selectArrayType">
+                    <option value="random" selected>Random</option>
+                    <option value="descending">Descending</option>
+                    <option value="nearlySorted">Nearly Sorted</option>
+                    <option value="fewUniques">Few Uniques</option>
+                </select>
                 <button id="generateBtn">New</button>
             </div>
             <div class="algorithms-menu">
@@ -63,8 +69,8 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Stability</td>
-                            <td id="stability">Stable</td>
+                            <td>Stable</td>
+                            <td id="stable">Yes</td>
                         </tr>
                         <tr>
                             <td>In-Place</td>

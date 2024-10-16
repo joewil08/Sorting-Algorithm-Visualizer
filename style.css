@@ -94,7 +94,7 @@ button:hover {
     background: #8ecc8b;
 }
 
-.select-algorithm {
+.select-algorithm, .select-array-type {
     display: flex;
     flex-direction: column;
     padding: 5px;

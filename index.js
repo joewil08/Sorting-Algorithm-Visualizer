@@ -1,6 +1,7 @@
 import { sleep } from "./helpers/util.js";
 import { SortingAlgorithms } from "./helpers/sorting-algorithms.js";
 import { complexities } from "./helpers/algorithm-stats.js";
+import { ArrayGenerator } from "./helpers/array-generator.js";
 
 function playNote(freq, isMuted) {
     if (isMuted) {
@@ -56,6 +57,7 @@ const stage = document.getElementById('stage');
 const gap = 3;
 stage.style.width = "1280px";
 
+const selectArrayType = document.getElementById("selectArrayType");
 const selectAlgorithm = document.getElementById("selectAlgorithm");
 
 const generateBtn = document.getElementById("generateBtn");
@@ -65,16 +67,19 @@ let bars = [];
 let barsDivs = [];
 
 const sortingAlgorithms = new SortingAlgorithms({});
+const arrayGenerator = new ArrayGenerator();
+
+const arrayTypes = [
+    arrayGenerator.random,
+    arrayGenerator.descending,
+    arrayGenerator.nearlySorted,
+    arrayGenerator.fewUniques
+];
 
 const start = () => {
     stage.innerHTML = "";
 
-    bars = Array(nBars).fill(0).map(_ => {    
-        return {
-            width: (parseInt(stage.style.width) - (nBars - 1) * gap - 10) / nBars,
-            height: Math.floor(Math.random() * 200) + 1
-        };
-    });
+    bars = arrayTypes[selectArrayType.selectedIndex](nBars);
 
     barsDivs = [];
 
