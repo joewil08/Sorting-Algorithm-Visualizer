@@ -1,5 +1,6 @@
 import { sleep } from "./helpers/util.js";
 import { SortingAlgorithms } from "./helpers/sorting-algorithms.js";
+import { complexities } from "./helpers/algorithm-stats.js";
 
 function playNote(freq, isMuted) {
     if (isMuted) {
@@ -30,6 +31,22 @@ document.getElementById('sound-checkbox').addEventListener('change', function() 
     isMuted = !this.checked;  // If checkbox is unchecked, isMuted becomes true
     console.log("isMuted:", isMuted);  // For debugging purposes
 });
+
+function updateComplexityTable() {
+    const algorithm = document.getElementById("selectAlgorithm").value;
+    const { bestTime, averageTime, worstTime, bestSpace, averageSpace, worstSpace, stability, inPlace, parallelizable } = complexities[algorithm];
+
+    document.getElementById("best-time").textContent = bestTime;
+    document.getElementById("average-time").textContent = averageTime;
+    document.getElementById("worst-time").textContent = worstTime;
+    document.getElementById("best-space").textContent = bestSpace;
+    document.getElementById("average-space").textContent = averageSpace;
+    document.getElementById("worst-space").textContent = worstSpace;
+    document.getElementById("stability").textContent = stability;
+    document.getElementById("in-place").textContent = inPlace;
+    document.getElementById("parallelizable").textContent = parallelizable;
+}
+document.getElementById("selectAlgorithm").addEventListener("change", updateComplexityTable);
 
 let nBars = 10;
 

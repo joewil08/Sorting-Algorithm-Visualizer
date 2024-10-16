@@ -19,14 +19,64 @@
                 <input type="number" name="sizeArray" id="numbersBars" min="1" max="250" value="10">
                 <button id="generateBtn">New</button>
             </div>
-            <select name="" class="select-algorithm" id="selectAlgorithm">
-                <option value="bubbleSort" selected>Bubble Sort</option>
-                <option value="selectionSort">Selection Sort</option>
-                <option value="insertionSort">Insertion Sort</option>
-                <option value="mergeSort">Merge Sort</option>
-                <option value="quickSort">Quick Sort</option>
-                <option value="heapSort">Heap Sort</option>
-            </select>
+            <div class="algorithms-menu">
+                <select name="" class="select-algorithm" id="selectAlgorithm">
+                    <option value="bubbleSort" selected>Bubble Sort</option>
+                    <option value="selectionSort">Selection Sort</option>
+                    <option value="insertionSort">Insertion Sort</option>
+                    <option value="mergeSort">Merge Sort</option>
+                    <option value="quickSort">Quick Sort</option>
+                    <option value="heapSort">Heap Sort</option>
+                </select>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Variation</th>
+                            <th>Time Complexity</th>
+                            <th>Space Complexity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Best Case</td>
+                            <td id="best-time">O(n)</td>
+                            <td id="best-space">O(1)</td>
+                        </tr>
+                        <tr>
+                            <td>Average Case</td>
+                            <td id="average-time">O(n^2)</td>
+                            <td id="average-space">O(1)</td>
+                        </tr>
+                        <tr>
+                            <td>Worst Case</td>
+                            <td id="worst-time">O(n^2)</td>
+                            <td id="worst-space">O(1)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Stability</td>
+                            <td id="stability">Stable</td>
+                        </tr>
+                        <tr>
+                            <td>In-Place</td>
+                            <td id="in-place">Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Parallelizable</td>
+                            <td id="parallelizable">No</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <div class="buttons">
                 <button id="sortBtn">Sort</button>
                 <label for="sound-checkbox">Sound</label>
