@@ -13,27 +13,40 @@
     <h1>Sorting Algorithm Visualizer</h1>
     <div class="container">
         <div class="stage" id="stage"></div>
-        <div class="sidebar">
-            <div class="generate-new">
-                <p>Generate New Array</p>
-                <input type="number" name="sizeArray" id="numbersBars" min="1" max="250" value="10">
-                <select name="" class="select-array-type" id="selectArrayType">
-                    <option value="random" selected>Random</option>
-                    <option value="descending">Descending</option>
-                    <option value="nearlySorted">Nearly Sorted</option>
-                    <option value="fewUniques">Few Uniques</option>
-                </select>
-                <button id="generateBtn">New</button>
+        <div class="bottombar">
+            <div class="menu">
+                <div class="generate-new">
+                    <p>Generate New Array</p>
+                    <input type="number" name="sizeArray" id="numbersBars" min="1" max="250" value="10">
+                    <select name="" class="select-array-type" id="selectArrayType">
+                        <option value="random" selected>Random</option>
+                        <option value="descending">Descending</option>
+                        <option value="nearlySorted">Nearly Sorted</option>
+                        <option value="fewUniques">Few Uniques</option>
+                    </select>
+                    <button id="generateBtn">New</button>
+                </div>
+                <div class="sort-menu">
+                    <div class="algorithms-menu">
+                        <select name="" class="select-algorithm" id="selectAlgorithm">
+                            <option value="bubbleSort" selected>Bubble Sort</option>
+                            <option value="selectionSort">Selection Sort</option>
+                            <option value="insertionSort">Insertion Sort</option>
+                            <option value="mergeSort">Merge Sort</option>
+                            <option value="quickSort">Quick Sort</option>
+                            <option value="heapSort">Heap Sort</option>
+                        </select>
+                    </div>
+                    <div class="buttons">
+                        <span>
+                            <label for="sound-checkbox">Sound</label>
+                            <input type="checkbox" id="sound-checkbox" checked>
+                        </span>
+                        <button id="sortBtn">Sort</button>
+                    </div>
+                </div>
             </div>
-            <div class="algorithms-menu">
-                <select name="" class="select-algorithm" id="selectAlgorithm">
-                    <option value="bubbleSort" selected>Bubble Sort</option>
-                    <option value="selectionSort">Selection Sort</option>
-                    <option value="insertionSort">Insertion Sort</option>
-                    <option value="mergeSort">Merge Sort</option>
-                    <option value="quickSort">Quick Sort</option>
-                    <option value="heapSort">Heap Sort</option>
-                </select>
+            <div class="tables">
                 <table>
                     <thead>
                         <tr>
@@ -82,11 +95,6 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
-            <div class="buttons">
-                <button id="sortBtn">Sort</button>
-                <label for="sound-checkbox">Sound</label>
-                <input type="checkbox" id="sound-checkbox" checked>
             </div>
         </div>
         

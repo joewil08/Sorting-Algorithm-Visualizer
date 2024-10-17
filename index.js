@@ -35,7 +35,7 @@ document.getElementById('sound-checkbox').addEventListener('change', function() 
 
 function updateComplexityTable() {
     const algorithm = document.getElementById("selectAlgorithm").value;
-    const { bestTime, averageTime, worstTime, bestSpace, averageSpace, worstSpace, stability, inPlace, parallelizable } = complexities[algorithm];
+    const { bestTime, averageTime, worstTime, bestSpace, averageSpace, worstSpace, stable, inPlace, parallelizable } = complexities[algorithm];
 
     document.getElementById("best-time").textContent = bestTime;
     document.getElementById("average-time").textContent = averageTime;
@@ -43,7 +43,7 @@ function updateComplexityTable() {
     document.getElementById("best-space").textContent = bestSpace;
     document.getElementById("average-space").textContent = averageSpace;
     document.getElementById("worst-space").textContent = worstSpace;
-    document.getElementById("stability").textContent = stability;
+    document.getElementById("stable").textContent = stable;
     document.getElementById("in-place").textContent = inPlace;
     document.getElementById("parallelizable").textContent = parallelizable;
 }

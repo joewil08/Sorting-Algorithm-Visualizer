@@ -20,13 +20,15 @@ body {
     gap: 5px;
 }
 
-.sidebar {
+.menu {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    column-gap: 40px;
     padding: 10px;
     height: 200px;
+    width: 400px;
     border-radius: 5px;
     background: #ffffff;
 }
@@ -65,7 +67,7 @@ body {
     justify-content: center;
     padding: 5px;
     font-size: 15px;
-    border: 1px dashed #000;
+    border: 1px solid #dddddd;
     border-radius: 5px;
 }
 
@@ -101,4 +103,50 @@ button:hover {
     margin-bottom: 10px;
     border-radius: 5px;
     background: #e3ffe1;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    border: 1px solid #dddddd;
+}
+
+table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+table th,
+table td {
+    padding: 12px 15px;
+}
+
+table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.tables {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    column-gap: 10px;
+    height: 200px;
+    border-radius: 5px;
+    background: #ffffff;
+}
+
+.bottombar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    height: 200px;
+    width: 1280px;
 }
