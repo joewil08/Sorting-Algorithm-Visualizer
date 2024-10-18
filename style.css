@@ -5,10 +5,12 @@
 }
 
 body {
+    margin: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+    font-family: sans-serif;
     background: #d3ffdd;
 }
 
@@ -25,7 +27,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    column-gap: 40px;
+    column-gap: 10px;
     padding: 10px;
     height: 200px;
     width: 400px;
@@ -65,7 +67,10 @@ body {
     align-items: center;
     align-content: center;
     justify-content: center;
+    gap: 12px;
     padding: 5px;
+    height: 165px;
+    width: 200px;
     font-size: 15px;
     border: 1px solid #dddddd;
     border-radius: 5px;
@@ -75,15 +80,8 @@ body {
     padding: 2px;
 }
 
-.buttons {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    gap: 10px;
-}
-
 button {
-    margin: 10px;
+    
     padding: 5px 16px;
     cursor: pointer;
     border-style: none;
@@ -108,8 +106,6 @@ button:hover {
 table {
     border-collapse: collapse;
     margin: 25px 0;
-    font-size: 0.9em;
-    font-family: sans-serif;
     min-width: 400px;
     border: 1px solid #dddddd;
 }
@@ -149,4 +145,19 @@ table tbody tr {
     padding: 0px;
     height: 200px;
     width: 1280px;
+}
+
+.sort-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 5px;
+    height: 165px;
+    width: 200px;
+    font-size: 15px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
 }

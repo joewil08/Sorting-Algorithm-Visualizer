@@ -16,7 +16,7 @@
         <div class="bottombar">
             <div class="menu">
                 <div class="generate-new">
-                    <p>Generate New Array</p>
+                    <p><b>Generate Array</b></p>
                     <input type="number" name="sizeArray" id="numbersBars" min="1" max="250" value="10">
                     <select name="" class="select-array-type" id="selectArrayType">
                         <option value="random" selected>Random</option>
@@ -27,23 +27,20 @@
                     <button id="generateBtn">New</button>
                 </div>
                 <div class="sort-menu">
-                    <div class="algorithms-menu">
-                        <select name="" class="select-algorithm" id="selectAlgorithm">
-                            <option value="bubbleSort" selected>Bubble Sort</option>
-                            <option value="selectionSort">Selection Sort</option>
-                            <option value="insertionSort">Insertion Sort</option>
-                            <option value="mergeSort">Merge Sort</option>
-                            <option value="quickSort">Quick Sort</option>
-                            <option value="heapSort">Heap Sort</option>
-                        </select>
-                    </div>
-                    <div class="buttons">
-                        <span>
-                            <label for="sound-checkbox">Sound</label>
-                            <input type="checkbox" id="sound-checkbox" checked>
-                        </span>
-                        <button id="sortBtn">Sort</button>
-                    </div>
+                    <p><b>Sort Array</b></p>
+                    <span>
+                        <label for="sound-checkbox">Sound</label>
+                        <input type="checkbox" id="sound-checkbox" checked>
+                    </span>
+                    <select name="" class="select-algorithm" id="selectAlgorithm">
+                        <option value="bubbleSort" selected>Bubble Sort</option>
+                        <option value="selectionSort">Selection Sort</option>
+                        <option value="insertionSort">Insertion Sort</option>
+                        <option value="mergeSort">Merge Sort</option>
+                        <option value="quickSort">Quick Sort</option>
+                        <option value="heapSort">Heap Sort</option>
+                    </select>
+                    <button id="sortBtn">Sort</button>
                 </div>
             </div>
             <div class="tables">
@@ -58,18 +55,18 @@
                     <tbody>
                         <tr>
                             <td>Best Case</td>
-                            <td id="best-time">O(n)</td>
-                            <td id="best-space">O(1)</td>
+                            <td id="best-time">-</td>
+                            <td id="best-space">-</td>
                         </tr>
                         <tr>
                             <td>Average Case</td>
-                            <td id="average-time">O(n^2)</td>
-                            <td id="average-space">O(1)</td>
+                            <td id="average-time">-</td>
+                            <td id="average-space">-</td>
                         </tr>
                         <tr>
                             <td>Worst Case</td>
-                            <td id="worst-time">O(n^2)</td>
-                            <td id="worst-space">O(1)</td>
+                            <td id="worst-time">-</td>
+                            <td id="worst-space">-</td>
                         </tr>
                     </tbody>
                 </table>
@@ -83,15 +80,15 @@
                     <tbody>
                         <tr>
                             <td>Stable</td>
-                            <td id="stable">Yes</td>
+                            <td id="stable">-</td>
                         </tr>
                         <tr>
                             <td>In-Place</td>
-                            <td id="in-place">Yes</td>
+                            <td id="in-place">-</td>
                         </tr>
                         <tr>
                             <td>Parallelizable</td>
-                            <td id="parallelizable">No</td>
+                            <td id="parallelizable">-</td>
                         </tr>
                     </tbody>
                 </table>
