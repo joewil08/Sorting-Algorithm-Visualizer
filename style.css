@@ -52,7 +52,7 @@ body {
     height: 100px;
     transition: all 300ms ease-out;
     border-radius: 6px;
-    background: #275425;
+    background: #005645;
 }
 
 .bar.activate {
@@ -73,7 +73,7 @@ body {
     width: 200px;
     font-size: 15px;
     border: 1px solid #dddddd;
-    border-radius: 5px;
+    
 }
 
 .generate-new input {
@@ -87,11 +87,11 @@ button {
     border-style: none;
     border-radius: 8px;
     color: #ffffff;
-    background: #5fc159;
+    background: #009879;
 }
 
 button:hover {
-    background: #8ecc8b;
+    background: #00725b;
 }
 
 .select-algorithm, .select-array-type {
@@ -107,6 +107,7 @@ table {
     border-collapse: collapse;
     margin: 25px 0;
     min-width: 400px;
+    border-radius: 5px;
     border: 1px solid #dddddd;
 }
 
@@ -159,5 +160,5 @@ table tbody tr {
     width: 200px;
     font-size: 15px;
     border: 1px solid #dddddd;
-    border-radius: 5px;
+    
 }
